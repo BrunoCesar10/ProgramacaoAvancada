@@ -8,7 +8,7 @@ void questao5();
 void questao7();
 void resposta(int n);
 
-class Espectador {
+struct Espectador {
 public:
 	int idade;
 	char nota;
