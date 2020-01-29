@@ -97,7 +97,7 @@ void questao7() {
 	Espectador audiencia[100];
 	for (int i = 0; i < 100; i++) {
 		audiencia[i] = Espectador();
-		audiencia[i] = { (rand() % 100) , (rand() % 5) };
+		audiencia[i] = { (rand() % 100) , opcoes[(rand() % 5)] };
 	}
 
 	for (int i = 0; i < 100; i++) {
