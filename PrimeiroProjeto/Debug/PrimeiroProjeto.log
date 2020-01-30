@@ -3,5 +3,7 @@ c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\pr
 c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
 c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(20): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
 c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  main.cpp
+  Generating Code...
   PrimeiroProjeto.vcxproj -> C:\Users\BRUNO_FONTES\documents\visual studio 2015\Projects\PrimeiroExercicio\Debug\PrimeiroProjeto.exe
   PrimeiroProjeto.vcxproj -> C:\Users\BRUNO_FONTES\documents\visual studio 2015\Projects\PrimeiroExercicio\Debug\PrimeiroProjeto.pdb (Full PDB)

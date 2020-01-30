@@ -190,6 +190,11 @@ void resposta(int n) {
 		questao5();
 		break;
 
+	case 7:
+		std::cout << "Resposta setima questao: " << std::endl;
+		questao7();
+		break;
+
 	default:
 		std::cout << "Questao nao existe.";
 	}
