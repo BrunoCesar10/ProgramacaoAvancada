@@ -59,12 +59,12 @@ void questao4() {
 	int inicio = 1;
 	int aux = 3;
 	int num = inicio;
-	std::cout << "Resposta da quarta questao: " << std::endl;
 	for (int i = 0; i < n; i++) {
 		std::cout << " " << num;
 		num = num + aux;
 		aux += 2;
 	}
+	std::cout << std::endl;
 }
 
 void questao5() {
@@ -82,6 +82,19 @@ void questao5() {
 		}
 		num = num + vetor[aux];
 		aux++;
+	}
+	std::cout << std::endl;
+}
+
+int questao6(int num) {
+	if (num == 1 || num == 2) {
+		return 1;
+	}
+	if (num > 2) {
+		return questao6(num - 1) + questao6(num - 2);
+	}
+	else {
+		return 0;
 	}
 }
 
@@ -147,15 +160,16 @@ void questao7() {
 	}
 	int media_idade_ruim = idade_ruim / qtd_ruim;
 
-	std::cout << "A quantidade de respostas ótimo foi " << qtd_otimo << std::endl;
-	std::cout << "A diferença percentual entre respostas bom e regular foi de " << diferenca_percentual << "%" << std::endl;
-	std::cout << "A média de idade das pessoas que responderam ruim foi " << media_idade_ruim << std::endl;
-	std::cout << "A percentagem de respostas péssimo foi " << qtd_pessimo << "%, e a maior idade que utilizou essa opcao foi " << maior_idade_pessimo << std::endl;
-	std::cout << "A diferença de idade entre a maior idade que respondeu ótimo e a maior idade que respondeu ruim é de " << diferenca_idade << " anos." << std::endl;
+	std::cout << "A quantidade de respostas otimo foi " << qtd_otimo << std::endl;
+	std::cout << "A diferenca percentual entre respostas bom e regular foi de " << diferenca_percentual << "%" << std::endl;
+	std::cout << "A media de idade das pessoas que responderam ruim foi " << media_idade_ruim << std::endl;
+	std::cout << "A percentagem de respostas pessimo foi " << qtd_pessimo << "%, e a maior idade que utilizou essa opcao foi " << maior_idade_pessimo << std::endl;
+	std::cout << "A diferenca de idade entre a maior idade que respondeu otimo e a maior idade que respondeu ruim foi de " << diferenca_idade << " anos." << std::endl;
 }
 
-void resposta(int n) {
+void resposta(int n, int variavel) {
 	int resposta;
+	int resposta6;
 	float respostaFloat;
 	float vetor[] = { 10, 100, 500, 1000, 10000, 20000 };
 	switch (n)
@@ -183,11 +197,20 @@ void resposta(int n) {
 	case 4:
 		std::cout << "Resposta quarta questao: " << std::endl;
 		questao4();
+		std::cout << std::endl;
 		break;
 
 	case 5:
 		std::cout << "Resposta quinta questao: " << std::endl;
 		questao5();
+		std::cout << std::endl;
+		break;
+
+	case 6:
+		std::cout << "Resposta sexta questao: " << std::endl;
+		resposta6 = questao6(variavel);
+		std::cout << resposta6 << std::endl;
+		std::cout << std::endl;
 		break;
 
 	case 7:
@@ -197,5 +220,6 @@ void resposta(int n) {
 
 	default:
 		std::cout << "Questao nao existe.";
+		break;
 	}
 }

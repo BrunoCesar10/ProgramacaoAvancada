@@ -8,5 +8,6 @@ int main()
 	resposta(3);
 	resposta(4);
 	resposta(5);
+	resposta(6, 10);  //segundo parâmetro é o input do fibonacci
 	resposta(7);
 }

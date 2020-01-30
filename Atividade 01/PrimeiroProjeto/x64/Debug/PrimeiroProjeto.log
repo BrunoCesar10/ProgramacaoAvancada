@@ -1,0 +1,7 @@
+﻿  questoes.cpp
+c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(15): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(20): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+c:\users\bruno_fontes\documents\visual studio 2015\projects\primeiroexercicio\primeiroprojeto\questoes.cpp(45): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  PrimeiroProjeto.vcxproj -> C:\Users\BRUNO_FONTES\documents\visual studio 2015\Projects\PrimeiroExercicio\x64\Debug\PrimeiroProjeto.exe
+  PrimeiroProjeto.vcxproj -> C:\Users\BRUNO_FONTES\documents\visual studio 2015\Projects\PrimeiroExercicio\x64\Debug\PrimeiroProjeto.pdb (Full PDB)
