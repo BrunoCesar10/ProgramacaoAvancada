@@ -93,7 +93,11 @@ void questao7() {
 	int idade_ruim = 0;
 	int qtd_ruim = 0;
 	int qtd_pessimo = 0;
+	int maior_idade_otimo = 0;
+	int maior_idade_ruim = 0;
+	int diferenca_idade = 0;
 	int maior_idade_pessimo = 0;
+	int diferenca_percentual;
 	Espectador audiencia[100];
 	for (int i = 0; i < 100; i++) {
 		audiencia[i] = Espectador();
@@ -103,10 +107,22 @@ void questao7() {
 	for (int i = 0; i < 100; i++) {
 		if (audiencia[i].nota == 'A') {   //quantidade de resposta ótimo
 			qtd_otimo++;
+			if (audiencia[i].idade > maior_idade_otimo) {
+				maior_idade_otimo = audiencia[i].idade;
+			}
+		}
+		if (audiencia[i].nota == 'B') {
+			qtd_bom++;
+		}
+		if (audiencia[i].nota == 'C') {
+			qtd_regular++;
 		}
 		if (audiencia[i].nota == 'D') {   // média de idade das pessoas que responderam ruim
 			qtd_ruim++;
 			idade_ruim += audiencia[i].idade;
+			if (audiencia[i].idade > maior_idade_ruim) {
+				maior_idade_ruim = audiencia[i].idade;
+			}
 		}
 		if (audiencia[i].nota == 'E') {  //a percentagem de respostas péssimo e a maior idade que utilizou esta opção
 			qtd_pessimo++;
@@ -115,11 +131,27 @@ void questao7() {
 			}
 		}
 	}
+
+	if (qtd_bom > qtd_regular) {      //a diferença percentual entre respostas bom e regular
+		diferenca_percentual = qtd_bom - qtd_regular;
+	}
+	else {
+		diferenca_percentual = qtd_regular - qtd_bom;
+	}
+
+	if (maior_idade_otimo > maior_idade_ruim) {      //a diferença de idade entre o mais velho ótimo e o mais velho ruim
+		diferenca_idade = maior_idade_otimo - maior_idade_ruim;
+	}
+	else {
+		diferenca_idade = maior_idade_ruim - maior_idade_otimo;
+	}
 	int media_idade_ruim = idade_ruim / qtd_ruim;
 
 	std::cout << "A quantidade de respostas ótimo foi " << qtd_otimo << std::endl;
+	std::cout << "A diferença percentual entre respostas bom e regular foi de " << diferenca_percentual << "%" << std::endl;
 	std::cout << "A média de idade das pessoas que responderam ruim foi " << media_idade_ruim << std::endl;
 	std::cout << "A percentagem de respostas péssimo foi " << qtd_pessimo << "%, e a maior idade que utilizou essa opcao foi " << maior_idade_pessimo << std::endl;
+	std::cout << "A diferença de idade entre a maior idade que respondeu ótimo e a maior idade que respondeu ruim é de " << diferenca_idade << " anos." << std::endl;
 }
 
 void resposta(int n) {
@@ -149,10 +181,12 @@ void resposta(int n) {
 		std::cout << respostaFloat << "\n\n";
 
 	case 4:
+		std::cout << "Resposta quarta questao: " << std::endl;
 		questao4();
 		break;
 
 	case 5:
+		std::cout << "Resposta quinta questao: " << std::endl;
 		questao5();
 		break;
 
