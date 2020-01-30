@@ -118,7 +118,7 @@ void questao7() {
 	}
 
 	for (int i = 0; i < 100; i++) {
-		if (audiencia[i].nota == 'A') {   //quantidade de resposta Ûtimo
+		if (audiencia[i].nota == 'A') {   //quantidade de resposta √≥timo
 			qtd_otimo++;
 			if (audiencia[i].idade > maior_idade_otimo) {
 				maior_idade_otimo = audiencia[i].idade;
@@ -130,14 +130,14 @@ void questao7() {
 		if (audiencia[i].nota == 'C') {
 			qtd_regular++;
 		}
-		if (audiencia[i].nota == 'D') {   // mÈdia de idade das pessoas que responderam ruim
+		if (audiencia[i].nota == 'D') {   // m√©dia de idade das pessoas que responderam ruim
 			qtd_ruim++;
 			idade_ruim += audiencia[i].idade;
 			if (audiencia[i].idade > maior_idade_ruim) {
 				maior_idade_ruim = audiencia[i].idade;
 			}
 		}
-		if (audiencia[i].nota == 'E') {  //a percentagem de respostas pÈssimo e a maior idade que utilizou esta opÁ„o
+		if (audiencia[i].nota == 'E') {  //a percentagem de respostas p√©ssimo e a maior idade que utilizou esta op√ß√£o
 			qtd_pessimo++;
 			if (audiencia[i].idade > maior_idade_pessimo) {
 				maior_idade_pessimo = audiencia[i].idade;
@@ -145,14 +145,14 @@ void questao7() {
 		}
 	}
 
-	if (qtd_bom > qtd_regular) {      //a diferenÁa percentual entre respostas bom e regular
+	if (qtd_bom > qtd_regular) {      //a diferen√ßa percentual entre respostas bom e regular
 		diferenca_percentual = qtd_bom - qtd_regular;
 	}
 	else {
 		diferenca_percentual = qtd_regular - qtd_bom;
 	}
 
-	if (maior_idade_otimo > maior_idade_ruim) {      //a diferenÁa de idade entre o mais velho Ûtimo e o mais velho ruim
+	if (maior_idade_otimo > maior_idade_ruim) {      //a diferen√ßa de idade entre o mais velho √≥timo e o mais velho ruim
 		diferenca_idade = maior_idade_otimo - maior_idade_ruim;
 	}
 	else {
@@ -193,6 +193,7 @@ void resposta(int n, int variavel) {
 		respostaFloat = questao3();
 		std::cout << "Resposta terceira questao: " << std::endl;
 		std::cout << respostaFloat << "\n\n";
+		break;
 
 	case 4:
 		std::cout << "Resposta quarta questao: " << std::endl;
